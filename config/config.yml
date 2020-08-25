@@ -1,8 +1,13 @@
 appname: webapp
+appenv: local
 appurl: https://www.hello.com
 
 db:
-  name: caifu_color
+  connection: mysql
+  charset: utf8mb4
+  collation: utf8mb4_unicode_ci
+  name: go_test_s
+  host: 127.0.0.1
   user: root
   password: a1112223
   port: 3306

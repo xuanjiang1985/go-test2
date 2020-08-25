@@ -21,11 +21,7 @@ func TestStore(t *testing.T) {
 }
 
 func TestRestore(t *testing.T) {
-	monster := &Monster{
-		Name:  "wang",
-		Age:   19,
-		Skill: "da da",
-	}
+	monster := &Monster{}
 
 	err := monster.Restore()
 
@@ -33,5 +29,8 @@ func TestRestore(t *testing.T) {
 		t.Fatalf("monster.Restore() test err %+v", err)
 	}
 
+	if monster.Name != "wang" {
+		t.Fatalf("monster.Restore() err %v, expect %v", monster.Name, "wang")
+	}
 	t.Logf("monster.Restore() test ok")
 }

@@ -2,7 +2,6 @@ package monster
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 
 	"github.com/pkg/errors"
@@ -29,7 +28,7 @@ func (m *Monster) Store() error {
 
 // Restore data from file
 func (m *Monster) Restore() error {
-	byte1, err := ioutil.ReadFile("monstor.str1")
+	byte1, err := ioutil.ReadFile("monstor.str")
 
 	if err != nil {
 		return errors.WithStack(err)
@@ -40,6 +39,6 @@ func (m *Monster) Restore() error {
 	if err != nil {
 		return errors.WithStack(err)
 	}
-	fmt.Printf("%#v\n", m)
+
 	return nil
 }
