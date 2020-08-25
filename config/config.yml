@@ -1,0 +1,14 @@
+appname: webapp
+appurl: https://www.hello.com
+
+db:
+  name: caifu_color
+  user: root
+  password: a1112223
+  port: 3306
+
+contacts:
+  - name: itest
+    email: test@test.com
+  - name: zhougang
+    email: hello@hello.com

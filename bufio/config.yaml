@@ -1,0 +1,19 @@
+port: 8124
+version: "v1.2.4"
+
+user:
+    name: zhougang
+    sex: 1
+    home: shenzhen
+
+database:
+    host: 127.0.0.1
+    user: root
+    dbname: test
+    pwd: 123456
+    
+etcd:
+    - host: 192.168.0.100
+      password: 22aaadd
+    - host: 192.168.0.101
+      password: 33aaddfd
