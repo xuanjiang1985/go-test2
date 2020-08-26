@@ -1,6 +1,6 @@
-appname: webapp
-appenv: local
-appurl: https://www.hello.com
+appName: webapp
+appEnv: local
+appUrl: https://www.hello.com
 
 db:
   connection: mysql

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"test/logger"
 	"test/message"
 	"test/monster"
@@ -51,4 +52,9 @@ func main() {
 	}
 
 	fmt.Println("done")
+
+	num := runtime.NumCPU()
+	fmt.Printf("cpu num: %d\n", num)
+
+	//m := make(map[int]int, 100)
 }

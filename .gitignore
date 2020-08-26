@@ -16,3 +16,5 @@
 # vendor/
 .DS_Store 
 */.DS_Store
+logrus.log
+*/logrus.log

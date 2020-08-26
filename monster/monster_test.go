@@ -30,7 +30,7 @@ func TestRestore(t *testing.T) {
 	}
 
 	if monster.Name != "wang" {
-		t.Fatalf("monster.Restore() err %v, expect %v", monster.Name, "wang")
+		t.Fatalf("monster.Restore() name value %v, expect %v", monster.Name, "wang")
 	}
 	t.Logf("monster.Restore() test ok")
 }

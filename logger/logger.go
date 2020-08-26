@@ -1,7 +1,6 @@
 package logger
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/sirupsen/logrus"
@@ -15,10 +14,10 @@ func Intance() *logrus.Logger {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(dir)
-	logger.Out, err = os.OpenFile(dir+"/storage/logs/logrus.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+
+	logger.Out, err = os.OpenFile(dir+"/logrus.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
-		panic("Failed to log to file storage/logs/logrus.log")
+		panic("Failed to log to file " + dir)
 	}
 	//defer file.Close()
 
