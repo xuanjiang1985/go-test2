@@ -1,21 +1,42 @@
 package main
 
-import (
-	"fmt"
-	"test/logger"
-)
+import "fmt"
 
-func main() {
-	map1 := make(map[int]int, 5)
-	map1[2] = 2
-	map1[10] = 10
-	map2 := map1
-	changeMap(map2)
-	fmt.Printf("map1: %v\n", map1)
-	var logger = logger.Intance()
-	logger.Info("hello 后杠 is error")
+func DeferFunc1(i int) (t int) {
+	t = i
+	defer func() {
+		t += 3
+	}()
+	return t
 }
 
-func changeMap(map1 map[int]int) {
-	map1[10] = 100
+func DeferFunc2(i int) int {
+	t := i
+	defer func() {
+		t += 3
+	}()
+	return t
+}
+
+func DeferFunc3(i int) (t int) {
+	defer func() {
+		t += i
+	}()
+	return 2
+}
+
+func DeferFunc4() (t int) {
+	defer func(i int) {
+		fmt.Println(i)
+		fmt.Println(t)
+	}(t)
+	t = 1
+	return 2
+}
+
+func main() {
+	fmt.Println(DeferFunc1(1))
+	// fmt.Println(DeferFunc2(1))
+	// fmt.Println(DeferFunc3(1))
+	DeferFunc4()
 }

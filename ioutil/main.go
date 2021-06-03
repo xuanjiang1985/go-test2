@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	byte1, err := ioutil.ReadFile("config.yaml")
+	byte1, err := ioutil.ReadFile("config.yaml1")
 	if err != nil {
 		fmt.Printf("%+v", errors.WithStack(err))
 	}
